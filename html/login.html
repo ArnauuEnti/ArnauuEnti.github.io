@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>login</title>
+<style>
+header nav a{
+color:red;
+font-size:25px;
+}
+header ul{
+padding:40px;
+}
+header nav ul{
+display:flex;
+justify-content:center;
+justify-content:space-around;
+background:black;
+}
+nav a:hover{
+color:white;
+background-color:none;
+text-decoration:underline;
+font-style:italic;
+}
+from{
+justify-content:center;
+display:flex;
+justify-content:space-around;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Login</h1>
+<nav>
+<ul>
+<li><a href="mi_primera_pagina.html">portada</a></li>
+<li><a href="cv.html">cv</a></li>
+<li><a href="contact.html">contacto</a></li>
+<li><a href="about.html">sobre mi</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<form>
+<p><Label for="login_form">Login:</label><input type="text" name="login" id="login_form" placeholder="tu nombre de usuario" /><em id="login_error">error</em></p>
+<p><Label for="password_form">Password:</label><input type="password" name="pass" id="password_form" placeholder="tu password"/></p>
+<p><Label for="robot_form">¿Eres un robot?</label><input type="checkbox" name="robot" id="robot_form" /></p>
+<p><input type="button" value="login" id="button_login"/></p>
+
+<script>
+
+function haz_click (){
+let user = document.getElementById("login_form");
+	
+	console.log(user);
+	console.log("click");
+	let login = document.getElementById("login_form");
+	let pass = document.getElementById("password_form");
+	let login_error = document.getElementById("login_error");
+	let r_user = /["']/;
+	let resultado = r_user.test(login.value);
+
+	console.log(resultado);
+
+	if (resultado){
+		login_error.innerHTML = "error";
+		login_error.style.color = "red"
+	}
+	else{
+		login_error.innerHTML = "ok";
+		login_error.style.color = "green"
+
+	}
+	
+}
+
+let boton = document.getElementById("button_login");
+boton.addEventListener("click", haz_click);
+
+
+
+
+
+</script>
+</form>
+</main>
+</body>
+</html>

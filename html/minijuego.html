@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>minijuego</title>
+</head>
+
+<body>
+<header>
+<h1>ARNAU JUVÉ Y SU MINIJUEGO SEXY</h1>
+</header>
+<main>
+<form>
+
+<p><Label for="numero">dame un numero entre 1 y 100:</label><input type="number" name="numero" id="numero" placeholder="introduce el numero" /></p>
+<p><input type="button" value="numero" id="button_minijuego"/></p>
+</form>
+<script>
+let numero_random = Math.floor(Math.random()*100) + 1;
+let button_minijuego = document.getElementById("button_minijuego");
+button_minijuego.addEventListener("click",function(event){
+console.log("click!");
+
+const numero = document.getElementById("numero").value;
+if (numero === ""){
+console.log("has de introducir un numero")
+return;
+}
+if (numero > numero_random){
+console.log("el numero a adivinar es menor");
+}
+else if (numero < numero_random){
+console.log("el numero a adivinar es mayor");
+}
+else{
+console.log("has ganado")
+}
+});
+</script>
+</main>
+</body>
+</html>
