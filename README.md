@@ -76,4 +76,4 @@ La sintaxis es: exclamacion seguido de una descripcion dentro de llaves angulada
 
 ### Enlaces
 
-Los enlaces son parecidos a las imagenes, la diferencia es que no llevan exclacion delante y se pueden introducir dentro de frases [como esta] (https://enti.cat).
+Los enlaces son parecidos a las imagenes, la diferencia es que no llevan exclacion delante y se pueden introducir dentro de frases [como esta](https://enti.cat).
